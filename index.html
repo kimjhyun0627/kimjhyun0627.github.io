@@ -2,44 +2,98 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>라이트박스</title>
-    <link rel="stylesheet" href="css/lightbox.css">
+    <meta name="viewport" content="width=device-width, initial-scale= "1">
+    <title>Kim JinHyun's WebPage</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=IBM+Plex+Sans+KR&family=Rajdhani&display=swap');
+
+      #HeaderAndMenu{
+        width: 100%;
+        height: minmax(10%, 100px);
+        display : grid;
+        grid-template-columns : repeat(5, 1fr);
+        grid-template-rows : 2fr 1px 1fr;
+        background-color: white;
+        position : fixed;
+        top : 0px;
+        font-family: 'Rajdhani', sans-serif;
+        font-size : 1vw;
+        letter-spacing: 0.7vw;
+        color: #707070;
+        text-align: center;
+      }
+      .Header{
+        grid-column: 2/5;
+        font-size : 2.5vw;
+        margin-top: 1vw;
+        letter-spacing: 2.8vw;
+      }
+      .HeaderLine{
+        grid-row-start: 2;
+        border-left : 1fr;
+        grid-column: 2/5;
+        background-color: #707070;
+      }
+      .Menu_HOW{
+        grid-row-start : 3;
+        grid-column : 2/3;
+        margin-top: 0.5vw;
+        margin-left: 6vw;
+        text-align: left;
+      }
+      .Menu_WHAT{
+        grid-row-start : 3;
+        grid-column : 3/4;
+        margin-top: 0.5vw;
+      }
+      .Menu_WHO{
+        grid-row-start : 3;
+        grid-column : 4/5;
+        margin-top: 0.5vw;
+        margin-right : 6vw;
+        text-align: right;
+      }
+      .BeRed{
+        color : #b10101;
+        ;
+      }
+      #Explain_ENGLISH{
+        width:60%;
+        margin-top : 5%;
+        margin-left : 20%;
+        padding-top : 10%;
+        font-family: 'Rajdhani', sans-serif;
+        font-size : 2vw;
+        letter-spacing: 0.7vw;
+        color: #707070;
+        text-align: center;
+      }
+      #Explain_KOREAN{
+        height:1000px;
+        width:60%;
+        margin-top : 4%;
+        margin-left : 20%;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 1.4vw;
+        color : #707070;
+        text-align: center;
+      }
+    </style>
   </head>
+
+
   <body>
-    <div class="row">
-      <ul>
-        <li><img src="images/tree-1-thumb.jpg" data-src="images/tree-1.jpg" class="pic"></li>
-        <li><img src="images/tree-2-thumb.jpg" data-src="images/tree-2.jpg" class="pic"></li>
-        <li><img src="images/tree-3-thumb.jpg" data-src="images/tree-3.jpg" class="pic"></li> 
-        <li><img src="images/tree-4-thumb.jpg" data-src="images/tree-4.jpg" class="pic"></li>
-        <li><img src="images/tree-5-thumb.jpg" data-src="images/tree-5.jpg" class="pic"></li>
-        <li><img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic"></li>          
-      </ul>    
+    <div id = "HeaderAndMenu">
+      <div class = "Header"><b>ABOUT<span class = "BeRed">CAR</span>DESIGN</b></div>
+      <div class = "HeaderLine"></div>
+      <div class = "Menu_WHAT">W<span class = "BeRed">H</span>AT</div>
+      <div class = "Menu_HOW"><span class = "BeRed">H</span>OW</div>
+      <div class = "Menu_WHO">W<span class = "BeRed">H</span>O</div>
     </div>
+    <div id = "Explain_ENGLISH">WHAT IS <span class = "BeRed"><b>CAR DESIGN</b></span>?</div>
+    <div id = "Explain_KOREAN">기존 자동차의 외형과 내장을 새로이 바꾸거나 새로운 자동차를 개발하기 위해
+      <br>자동자 외형과 내장의 디자인을 연구·개발하는 일</div>
 
-    <div id="lightbox">
-			<img src="images/tree-1.jpg" alt="" id="lightboxImage">			
-    </div>
-
-    <script>
-      var pics = document.getElementsByClassName("pic"); // .pic인 요소들을 가져와 pics 라는 변수에 저장. querySelectorAll(".pic")도 가능
-      var lightbox = document.getElementById("lightbox");  // 라이트 박스. querySelector("#lightbox")도 가능
-      var lightboxImage = document.getElementById("lightboxImage");  // 라이트 박스 안의 이미지. querySelector("#lightboxImage")도 가능
-
-      for (i=0; i<pics.length; i++) {
-        pics[i].addEventListener("click", showLightbox);
-      }
-
-      function showLightbox() {
-				var bigLocation = this.getAttribute("data-src"); // bigLocation = this.data-src; 도 가능.
-				lightboxImage.setAttribute("src", bigLocation);  // lightboxImage.src = bigLocation; 도 가능.
-				lightbox.style.display = "block";  // 라이트박스 이미지를 화면에 표시
-      }
-      
-      lightbox.onclick = function() {  //click 이벤트가 발생했을 때 실행할 함수 선언
-				lightbox.style.display = "none";  // lightbox 요소를 화면에서 감춤
-      }
-    </script>
+    
   </body>
 </html>
