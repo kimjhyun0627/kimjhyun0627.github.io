@@ -6,7 +6,10 @@
     <title>Kim JinHyun's WebPage</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=IBM+Plex+Sans+KR&family=Rajdhani&display=swap');
-
+      
+      .container{
+        width : 100%;
+      }
       #HeaderAndMenu{
         top : 0px;
         width: 100%;
@@ -46,7 +49,7 @@
         grid-column : 3/4;
         margin-top: 0.5vw;
       }
-      .Menu_WHAT.hover{
+      .Menu_WHAT:target{
         background-color: #707070;
         color :white;
       }
@@ -81,27 +84,15 @@
         border-radius: 30px;
         color: #707070;
       }
-      .test.hover{
+      .test:hover{
         background-color: #707070;
         color :white;
       }
-      .test.hover .BeRed{
+      .test:hover .BeRed{
         color : #fd5656b4
       }
       
     </style>
-    <script type = 'text/javascript'>
-      let WHAT = document.getElementsByClassName('Menu_WHAT');
-      let WHAT_MAIN = document.getElementsByClassName('test');
-      WHAT.addEventListener('mouseover'),function(){
-        WHAT.setAttribute('class','hover');
-        WHAT_MAIN.setAttribute('class','hover');
-      }
-      WHAT.addEventListener('mouseout'),function(){
-        WHAT.setAttribute('class');
-        WHAT_MAIN.setAttribute('class');
-      }
-    </script>
     
   </head>
   <body>
@@ -113,7 +104,7 @@
       <div class = "Menu_WHO">W<span class = "BeRed">H</span>O</div>
     </div>
 
-    <div class = "test" onclick = "WHAT_TEST()">
+    <div class = "test" onclick = "WHAT_TEST()" href = ".Menu_WHAT">
       <div id = "English">WHAT IS <span class = "BeRed"><b>CAR DESIGN</b></span>?</div>
       <div id = "Korean">기존 자동차의 외형과 내장을 새로이 바꾸거나 새로운 자동차를 개발하기 위해
         <br>자동자 외형과 내장의 디자인을 연구·개발하는 일</div>
