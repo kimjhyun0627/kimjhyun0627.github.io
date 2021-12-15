@@ -46,6 +46,10 @@
         grid-column : 3/4;
         margin-top: 0.5vw;
       }
+      .Menu_WHAT.hover{
+        background-color: #707070;
+        color :white;
+      }
       .Menu_WHO{
         grid-row-start : 3;
         grid-column : 4/5;
@@ -57,28 +61,48 @@
         color : #b10101;
         ;
       }
-      #ENGLISH{
-        width:60%;
-        margin-top : 5%;
-        margin-left : 20%;
-        padding-top : 10%;
+      #English{
         font-family: 'Rajdhani', sans-serif;
         font-size : 2vw;
         letter-spacing: 0.7vw;
-        color: #707070;
         text-align: center;
       }
-      #KOREAN{
-        height:1000px;
-        width:60%;
-        margin-top : 4%;
-        margin-left : 20%;
+      #Korean{
         font-family: 'IBM Plex Sans KR', sans-serif;
         font-size: 1.4vw;
-        color : #707070;
         text-align: center;
       }
+      .test{
+        width:60%;
+        margin-top : 10%;
+        margin-left : 20%;
+        padding-top : 3%;
+        padding-bottom: 3%;
+        border-radius: 30px;
+        color: #707070;
+      }
+      .test.hover{
+        background-color: #707070;
+        color :white;
+      }
+      .test.hover .BeRed{
+        color : #fd5656b4
+      }
+      
     </style>
+    <script type = 'text/javascript'>
+      let WHAT = document.getElementsByClassName('Menu_WHAT');
+      let WHAT_MAIN = document.getElementsByClassName('test');
+      WHAT.addEventListener('mouseover'),function(){
+        WHAT.setAttribute('class','hover');
+        WHAT_MAIN.setAttribute('class','hover');
+      }
+      WHAT.addEventListener('mouseout'),function(){
+        WHAT.setAttribute('class');
+        WHAT_MAIN.setAttribute('class');
+      }
+    </script>
+    
   </head>
   <body>
     <div id = "HeaderAndMenu">
@@ -89,9 +113,11 @@
       <div class = "Menu_WHO">W<span class = "BeRed">H</span>O</div>
     </div>
 
-    <div id = "ENGLISH">WHAT IS <span class = "BeRed"><b>CAR DESIGN</b></span>?</div>
-    <div id = "KOREAN">기존 자동차의 외형과 내장을 새로이 바꾸거나 새로운 자동차를 개발하기 위해
-      <br>자동자 외형과 내장의 디자인을 연구·개발하는 일</div>
+    <div class = "test" onclick = "WHAT_TEST()">
+      <div id = "English">WHAT IS <span class = "BeRed"><b>CAR DESIGN</b></span>?</div>
+      <div id = "Korean">기존 자동차의 외형과 내장을 새로이 바꾸거나 새로운 자동차를 개발하기 위해
+        <br>자동자 외형과 내장의 디자인을 연구·개발하는 일</div>
+    </div>
 
     
   </body>
