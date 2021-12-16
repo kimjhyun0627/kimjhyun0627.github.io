@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=IBM+Plex+Sans+KR&family=Rajdhani&display=swap');
+    
+#HeaderAndMenu{
+    top : 0px;
+    width: 100%;
+    height: minmax(10%, 100px);
+    display : grid;
+    grid-template-columns : repeat(5, 1fr);
+    grid-template-rows : 2fr 1px 1fr;
+    background-color: white;
+    position : fixed;
+    font-family: 'Rajdhani', sans-serif;
+    font-size : 1vw;
+    letter-spacing: 0.7vw;
+    color: #707070;
+    text-align: center;
+}
+.Header{
+    grid-column: 2/5;
+    font-size : 2.5vw;
+    margin-top: 1vw;
+    letter-spacing: 2.7vw;
+}
+.HeaderLine{
+    grid-row-start: 2;
+    margin-right : 3px;
+    grid-column: 2/5;
+    background-color: #707070;
+}
+.Menu_HOW{
+    background-color: rgba(255,255,255,0.5);
+    grid-row-start : 3;
+    grid-column : 2/3;
+    margin-top: 0.5vw;
+    margin-left: 6vw;
+    text-align: left;
+}
+#Menu_WHAT{
+    border:hidden;
+    background-color: rgba(255,255,255,0.5);
+    grid-row-start : 3;
+    grid-column : 3/4;
+    margin-top: 0.5vw;
+}
+.Menu_WHO{
+    background-color: rgba(255,255,255,0.5);
+    grid-row-start : 3;
+    grid-column : 4/5;
+    margin-top: 0.5vw;
+    margin-right : 6vw;
+    text-align: right;
+}
+.BeRed{
+    color : #b10101;
+}
+#English{
+    font-family: 'Rajdhani', sans-serif;
+    font-size : 3vw;
+    letter-spacing: 0.7vw;
+    text-align: center;
+}
+#Korean{
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 1.8vw;
+    line-height: 250%;
+    text-align: center;
+}
+.Menu_WHAT{
+    width: 60%;
+    height : 1000px;
+    margin-top : 10%;
+    margin-left : 20%;
+    padding-top : 3%;
+    padding-bottom: 3%;
+    border-radius: 30px;
+    color: #707070;
+}
+#innercontainer-What {
+    width: 100%;
+    height: 60%;
+    margin-left : 0%;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+#innercontainer-What::-webkit-scrollbar{
+    width : 1%;
+}
+.item-What {
+    display: flex;
+    width : 100%;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+}
+.text-What{
+    height : 65%;
+    background-color: white;
+}

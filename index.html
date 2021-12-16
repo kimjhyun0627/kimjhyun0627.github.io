@@ -4,111 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale= "1">
     <title>Kim JinHyun's WebPage</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=IBM+Plex+Sans+KR&family=Rajdhani&display=swap');
-      
-      .container{
-        width : 100%;
-      }
-      #HeaderAndMenu{
-        top : 0px;
-        width: 100%;
-        height: minmax(10%, 100px);
-        display : grid;
-        grid-template-columns : repeat(5, 1fr);
-        grid-template-rows : 2fr 1px 1fr;
-        background-color: white;
-        position : fixed;
-        font-family: 'Rajdhani', sans-serif;
-        font-size : 1vw;
-        letter-spacing: 0.7vw;
-        color: #707070;
-        text-align: center;
-      }
-      #Header{
-        grid-column: 2/5;
-        font-size : 2.5vw;
-        margin-top: 1vw;
-        letter-spacing: 2.8vw;
-      }
-      #HeaderLine{
-        grid-row-start: 2;
-        border-left : 1fr;
-        grid-column: 2/5;
-        background-color: #707070;
-      }
-      #Menu_HOW{
-        grid-row-start : 3;
-        grid-column : 2/3;
-        margin-top: 0.5vw;
-        margin-left: 6vw;
-        text-align: left;
-      }
-      #Menu_WHAT{
-        grid-row-start : 3;
-        grid-column : 3/4;
-        margin-top: 0.5vw;
-      }
-      #Menu_WHO{
-        grid-row-start : 3;
-        grid-column : 4/5;
-        margin-top: 0.5vw;
-        margin-right : 6vw;
-        text-align: right;
-      }
-      .BeRed{
-        color : #b10101;
-        ;
-      }
-      #English{
-        font-family: 'Rajdhani', sans-serif;
-        font-size : 2vw;
-        letter-spacing: 0.7vw;
-        text-align: center;
-      }
-      #Korean{
-        font-family: 'IBM Plex Sans KR', sans-serif;
-        font-size: 1.4vw;
-        text-align: center;
-      }
-      #test{
-        width:60%;
-        margin-top : 10%;
-        margin-left : 20%;
-        padding-top : 3%;
-        padding-bottom: 3%;
-        border-radius: 30px;
-        color: #707070;
-      }
-      #test:hover{
-        background-color: #707070;
-        color :white;
-      }
-      #test:hover .BeRed{
-        color : #fd5656b4
-      }
-      
-    </style>
-    
+    <link rel = "stylesheet" href = "cssfile.css"> 
   </head>
   <body>
-    <div class = "container">
-      <div id = "HeaderAndMenu">
-        <div id = "Header"><b>ABOUT<span class = "BeRed">CAR</span>DESIGN</b></div>
-        <div id = "HeaderLine"></div>
-        <div id = "Menu_WHAT">W<span class = "BeRed">H</span>AT</div>
-        <div id = "Menu_HOW"><span class = "BeRed">H</span>OW</div>
-        <div id = "Menu_WHO">W<span class = "BeRed">H</span>O</div>
-      </div>
-  
-      <div id = "test">
-        <div id = "English">WHAT IS <span class = "BeRed"><b>CAR DESIGN</b></span>?</div>
-        <div id = "Korean">기존 자동차의 외형과 내장을 새로이 바꾸거나 새로운 자동차를 개발하기 위해
-          <br>자동자 외형과 내장의 디자인을 연구 · 개발하는 일</div>
-      </div>
-  
+    <header>
+        <div id = "HeaderAndMenu">
+          <div class = "Header"><b>ABOUT<span class = "BeRed">&nbsp;CAR</span>&nbsp;DESIGN</b></div>
+          <div class = "HeaderLine"></div>
+          <button id = "Menu_WHAT" type = "button">W&nbsp<span class = "BeRed">H&nbsp</span>A&nbspT</button>
+          <div class = "Menu_HOW"><span class = "BeRed">H&nbsp</span>O&nbspW</div>
+          <div class = "Menu_WHO">W&nbsp<span class = "BeRed">H&nbsp</span>O</div>
+        </div>
+    </header>
+    <div style="height:1000px; background-color:turquoise;"></div>//test
+      <div class = "Menu_WHAT">
+        <br><br>
+        <div id = "innercontainer-What">
+          <img alt="imgage2" src="images/Porsche-Vision_Gran_Turismo_Concept-2021-1280-01.jpg" class="item-What" style="scroll-snap-align:start;"/>
+          <div id = "English" class = "item-What text-What">WHAT IS<span class = "BeRed"><b>&nbsp;CAR DESIGN</b></span>?</div>
+          <img alt="" src="images/Porsche-Vision_Gran_Turismo_Concept-2021-1280-01.jpg" class="item-What"/>
+          <div id = "Korean" class = "item-What text-What">기존 자동차의 외형과 내장을 새로이 바꾸거나 새로운 자동차를 개발하기 위해
+            <br>자동자 외형과 내장의 디자인을 연구 · 개발하는 일</div>
+          <img alt="" src="images/Porsche-Vision_Gran_Turismo_Concept-2021-1280-01.jpg" class="item-What"/>
+          <img alt="" src="images/Porsche-Vision_Gran_Turismo_Concept-2021-1280-01.jpg" class="item-What" style="scroll-snap-align:end;" />
+        </div>
     </div>
-   
-    
+
+    <script>
+      const btnArr = document.getElementsByTagName('button');
+      for(let i = 0; i < btnArr.length; i++){
+         btnArr[i].addEventListener('click',function(e){
+            e.preventDefault(); document.querySelector('.Menu_WHAT').scrollIntoView({behavior:'smooth', block:'start'});
+          });
+        }
+    </script>
   </body>
 </html>
