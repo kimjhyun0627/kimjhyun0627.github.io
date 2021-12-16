@@ -11,32 +11,34 @@
         <div id = "HeaderAndMenu">
           <div class = "Header"><b>ABOUT<span class = "BeRed">&nbsp;CAR</span>&nbsp;DESIGN</b></div>
           <div class = "HeaderLine"></div>
-          <button id = "Menu_WHAT" type = "button">W&nbsp<span class = "BeRed">H&nbsp</span>A&nbspT</button>
-          <div class = "Menu_HOW"><span class = "BeRed">H&nbsp</span>O&nbspW</div>
-          <div class = "Menu_WHO">W&nbsp<span class = "BeRed">H&nbsp</span>O</div>
+          <button class = "Menu_WHAT" type = "button"><a href = "#WHAT">W&nbsp<span class = "BeRed">H&nbsp</span>A&nbspT</a></button>
+          <button class = "Menu_HOW" type = "button"><a href = "#HOW"><span class = "BeRed">H&nbsp</span>O&nbspW</a></button>
+          <button class = "Menu_WHO" type = "button"><a href = "#WHO">W&nbsp<span class = "BeRed">H&nbsp</span>O</a></button>
         </div>
     </header>
-    <div style="height:1000px; background-color:turquoise;"></div>//test
-      <div class = "Menu_WHAT">
-        <br><br>
-        <div id = "innercontainer-What">
-          <img alt="imgage2" src="images/Porsche-Vision_Gran_Turismo_Concept-2021-1280-01.jpg" class="item-What" style="scroll-snap-align:start;"/>
-          <div id = "English" class = "item-What text-What">WHAT IS<span class = "BeRed"><b>&nbsp;CAR DESIGN</b></span>?</div>
-          <img alt="" src="images/Porsche-Vision_Gran_Turismo_Concept-2021-1280-01.jpg" class="item-What"/>
-          <div id = "Korean" class = "item-What text-What">기존 자동차의 외형과 내장을 새로이 바꾸거나 새로운 자동차를 개발하기 위해
-            <br>자동자 외형과 내장의 디자인을 연구 · 개발하는 일</div>
-          <img alt="" src="images/Porsche-Vision_Gran_Turismo_Concept-2021-1280-01.jpg" class="item-What"/>
-          <img alt="" src="images/Porsche-Vision_Gran_Turismo_Concept-2021-1280-01.jpg" class="item-What" style="scroll-snap-align:end;" />
-        </div>
+    <div id = "WHAT">
+      <br><br>
+      <div id = "container">
+        <img alt="imgage2" src="images/Porsche-Vision_Gran_Turismo_Concept-2021-1280-01.jpg" class="item-What" style="scroll-snap-align:start;"/>
+        <div id = "English" class = "item-What text-What">WHAT IS<span class = "BeRed"><b>&nbsp;CAR DESIGN</b></span>?</div>
+        <img alt="" src="images/Porsche-Vision_Gran_Turismo_Concept-2021-1280-01.jpg" class="item-What"/>
+        <div id = "Korean" class = "item-What text-What">기존 자동차의 외형과 내장을 새로이 바꾸거나 새로운 자동차를 개발하기 위해
+          <br>자동자 외형과 내장의 디자인을 연구 · 개발하는 일</div>
+        <img alt="" src="images/Porsche-Vision_Gran_Turismo_Concept-2021-1280-01.jpg" class="item-What"/>
+        <img alt="" src="images/Porsche-Vision_Gran_Turismo_Concept-2021-1280-01.jpg" class="item-What" style="scroll-snap-align:end;" />
+      </div>
+    </div>
+    <div id = "HOW">
+      <div id = "container">
+        <img alt="imgage2" src="images/Porsche-Vision_Gran_Turismo_Concept-2021-1280-01.jpg" class="item-What" style="scroll-snap-align:start;"/>
+        <div id = "English" class = "item-What text-What">WHAT IS<span class = "BeRed"><b>&nbsp;CAR DESIGN</b></span>?</div>
+        <img alt="" src="images/Porsche-Vision_Gran_Turismo_Concept-2021-1280-01.jpg" class="item-What"/>
+        <div id = "Korean" class = "item-What text-What">기존 자동차의 외형과 내장을 새로이 바꾸거나 새로운 자동차를 개발하기 위해
+          <br>자동자 외형과 내장의 디자인을 연구 · 개발하는 일</div>
+        <img alt="" src="images/Porsche-Vision_Gran_Turismo_Concept-2021-1280-01.jpg" class="item-What"/>
+        <img alt="" src="images/Porsche-Vision_Gran_Turismo_Concept-2021-1280-01.jpg" class="item-What" style="scroll-snap-align:end;" />
+      </div>
     </div>
 
-    <script>
-      const btnArr = document.getElementsByTagName('button');
-      for(let i = 0; i < btnArr.length; i++){
-         btnArr[i].addEventListener('click',function(e){
-            e.preventDefault(); document.querySelector('.Menu_WHAT').scrollIntoView({behavior:'smooth', block:'start'});
-          });
-        }
-    </script>
   </body>
 </html>
