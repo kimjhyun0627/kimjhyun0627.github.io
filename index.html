@@ -25,35 +25,31 @@
         color: #707070;
         text-align: center;
       }
-      .Header{
+      #Header{
         grid-column: 2/5;
         font-size : 2.5vw;
         margin-top: 1vw;
         letter-spacing: 2.8vw;
       }
-      .HeaderLine{
+      #HeaderLine{
         grid-row-start: 2;
         border-left : 1fr;
         grid-column: 2/5;
         background-color: #707070;
       }
-      .Menu_HOW{
+      #Menu_HOW{
         grid-row-start : 3;
         grid-column : 2/3;
         margin-top: 0.5vw;
         margin-left: 6vw;
         text-align: left;
       }
-      .Menu_WHAT{
+      #Menu_WHAT{
         grid-row-start : 3;
         grid-column : 3/4;
         margin-top: 0.5vw;
       }
-      .Menu_WHAT:target{
-        background-color: #707070;
-        color :white;
-      }
-      .Menu_WHO{
+      #Menu_WHO{
         grid-row-start : 3;
         grid-column : 4/5;
         margin-top: 0.5vw;
@@ -75,7 +71,7 @@
         font-size: 1.4vw;
         text-align: center;
       }
-      .test{
+      #test{
         width:60%;
         margin-top : 10%;
         margin-left : 20%;
@@ -84,11 +80,11 @@
         border-radius: 30px;
         color: #707070;
       }
-      .test:hover{
+      #test:hover{
         background-color: #707070;
         color :white;
       }
-      .test:hover .BeRed{
+      #test:hover .BeRed{
         color : #fd5656b4
       }
       
@@ -96,20 +92,23 @@
     
   </head>
   <body>
-    <div id = "HeaderAndMenu">
-      <div class = "Header"><b>ABOUT<span class = "BeRed">CAR</span>DESIGN</b></div>
-      <div class = "HeaderLine"></div>
-      <div class = "Menu_WHAT">W<span class = "BeRed">H</span>AT</div>
-      <div class = "Menu_HOW"><span class = "BeRed">H</span>OW</div>
-      <div class = "Menu_WHO">W<span class = "BeRed">H</span>O</div>
+    <div class = "container">
+      <div id = "HeaderAndMenu">
+        <div id = "Header"><b>ABOUT<span class = "BeRed">CAR</span>DESIGN</b></div>
+        <div id = "HeaderLine"></div>
+        <div id = "Menu_WHAT">W<span class = "BeRed">H</span>AT</div>
+        <div id = "Menu_HOW"><span class = "BeRed">H</span>OW</div>
+        <div id = "Menu_WHO">W<span class = "BeRed">H</span>O</div>
+      </div>
+  
+      <div id = "test">
+        <div id = "English">WHAT IS <span class = "BeRed"><b>CAR DESIGN</b></span>?</div>
+        <div id = "Korean">기존 자동차의 외형과 내장을 새로이 바꾸거나 새로운 자동차를 개발하기 위해
+          <br>자동자 외형과 내장의 디자인을 연구 · 개발하는 일</div>
+      </div>
+  
     </div>
-
-    <div class = "test" onclick = "WHAT_TEST()" href = ".Menu_WHAT">
-      <div id = "English">WHAT IS <span class = "BeRed"><b>CAR DESIGN</b></span>?</div>
-      <div id = "Korean">기존 자동차의 외형과 내장을 새로이 바꾸거나 새로운 자동차를 개발하기 위해
-        <br>자동자 외형과 내장의 디자인을 연구·개발하는 일</div>
-    </div>
-
+   
     
   </body>
 </html>
