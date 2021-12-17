@@ -1,8 +1,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=IBM+Plex+Sans+KR&family=Rajdhani&display=swap');
-    
+
 html{
     scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width : 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #707070;
+    border-radius: 2.5px;
 }
 a{
     text-decoration: none;
@@ -115,17 +122,18 @@ a:hover{
 #container {
     width: 60%;
     height: 100%;
+    margin-top: 5%;
     margin-left : 20%;
     margin-right: 20%;
     overflow: auto;
     scroll-snap-type: y mandatory;
 }
 #container::-webkit-scrollbar{
-    width : 5px;
+    width : 2px;
 }
 #container::-webkit-scrollbar-thumb{
-    background-color: #707070;
-    border-radius: 2.5px;
+    background-color: #70707070;
+    border-radius: 0.5px;
 }
 .item {
     display: flex;
