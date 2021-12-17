@@ -47,6 +47,14 @@ a:hover{
     background-color: #707070;
 }
 .Menu_HOW{
+    border:hidden;
+    background-color: rgba(255,255,255,0.5);
+    grid-row-start : 3;
+    grid-column : 3/4;
+    margin-top: 0.5vw;
+    
+}
+.Menu_WHAT{
     border: hidden;
     background-color: rgba(255,255,255,0.5);
     grid-row-start : 3;
@@ -54,13 +62,6 @@ a:hover{
     margin-top: 0.5vw;
     margin-left: 6vw;
     text-align: left;
-}
-.Menu_WHAT{
-    border:hidden;
-    background-color: rgba(255,255,255,0.5);
-    grid-row-start : 3;
-    grid-column : 3/4;
-    margin-top: 0.5vw;
 }
 .Menu_WHO{
     border: hidden;
