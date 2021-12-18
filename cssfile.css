@@ -34,6 +34,20 @@ a:hover{
     color: #707070;
     text-align: center;
 }
+#Footer{
+    top : 0px;
+    width: 100%;
+    height: minmax(10%, 100px);
+    display : grid;
+    grid-template-columns : repeat(5, 1fr);
+    grid-template-rows : 1fr 1px;
+    background-color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size : 1vw;
+    letter-spacing: 0.7vw;
+    color: #707070;
+    text-align: center;
+}
 .Header{
     grid-column: 2/5;
     font-size : 2.5vw;
